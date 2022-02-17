@@ -29,7 +29,7 @@ namespace DiceRollForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //pbxDie.ImageLocation = "C:\\Users\\Emma\\Documents\\Programming\\Mini Projects\\DiceRollForm\\DiceRollWithImage";
+            
             Image die1 = Image.FromFile(die1Path);
             pbxDie.SizeMode = PictureBoxSizeMode.AutoSize;
             Image die2 = Image.FromFile(die2Path);
