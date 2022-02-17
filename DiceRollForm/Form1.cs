@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,15 @@ namespace DiceRollForm
 {
     public partial class Form1 : Form
     {
+
+        public string die1Path = Path.GetDirectoryName(Application.ExecutablePath) + "\\DieOne.png";
+        public string die2Path = Path.GetDirectoryName(Application.ExecutablePath) + "\\DieTwo.png";
+        public string die3Path = Path.GetDirectoryName(Application.ExecutablePath) + "\\DieThree.png";
+        public string die4Path = Path.GetDirectoryName(Application.ExecutablePath) + "\\DieFour.png";
+        public string die5Path = Path.GetDirectoryName(Application.ExecutablePath) + "\\DieFive.png";
+        public string die6Path = Path.GetDirectoryName(Application.ExecutablePath) + "\\DieSix.png";
+
+
         public Form1()
         {
             InitializeComponent();
@@ -20,13 +30,13 @@ namespace DiceRollForm
         private void button1_Click(object sender, EventArgs e)
         {
             //pbxDie.ImageLocation = "C:\\Users\\Emma\\Documents\\Programming\\Mini Projects\\DiceRollForm\\DiceRollWithImage";
-            Image die1 = Image.FromFile(@"C:\\Users\\emmah\\Documents\\USB back up 14092021\\Programming\\Mini Projects\\DiceRollForm\\DiceRollWithImage\\DieOne.png");
+            Image die1 = Image.FromFile(die1Path);
             pbxDie.SizeMode = PictureBoxSizeMode.AutoSize;
-            Image die2 = Image.FromFile(@"C:\\Users\\emmah\\Documents\\USB back up 14092021\\Programming\\Mini Projects\\DiceRollForm\\DiceRollWithImage\\DieTwo.png");
-            Image die3 = Image.FromFile(@"C:\\Users\\emmah\\Documents\\USB back up 14092021\\Programming\\Mini Projects\\DiceRollForm\\DiceRollWithImage\\DieThree.png");
-            Image die4 = Image.FromFile(@"C:\\Users\\emmah\\Documents\\USB back up 14092021\\Programming\\Mini Projects\\DiceRollForm\\DiceRollWithImage\\DieFour.png");
-            Image die5 = Image.FromFile(@"C:\\Users\\emmah\\Documents\\USB back up 14092021\\Programming\\Mini Projects\\DiceRollForm\\DiceRollWithImage\\DieFive.png");
-            Image die6 = Image.FromFile(@"C:\\Users\\emmah\\Documents\\USB back up 14092021\\Programming\\Mini Projects\\DiceRollForm\\DiceRollWithImage\\DieSix.png");
+            Image die2 = Image.FromFile(die2Path);
+            Image die3 = Image.FromFile(die3Path);
+            Image die4 = Image.FromFile(die4Path);
+            Image die5 = Image.FromFile(die5Path);
+            Image die6 = Image.FromFile(die6Path);
 
             Random r = new Random();
             int dieRoll = r.Next(1, 6);
